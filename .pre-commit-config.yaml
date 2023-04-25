@@ -1,0 +1,15 @@
+repos:
+    -   repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v2.4.0
+        hooks:
+            -   id: trailing-whitespace
+                exclude: ^tests/(data|resources)
+            -   id: flake8
+                exclude: ^tests/data
+            -   id: check-added-large-files
+                exclude: ^tests/data
+    -   repo:  https://github.com/PyCQA/pylint
+        rev: pylint-2.4.4
+        hooks:
+            -   id: pylint
+                exclude: ^test
